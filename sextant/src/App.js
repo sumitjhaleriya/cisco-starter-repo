@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './components/cards';
 import Exhibit from './components/exhibit';
 import List from './components/itemlist';
+import React from 'react';
+
+import PublicIPAddress from './components/publicipaddress';
 
 function App() {
   return (
@@ -15,6 +18,13 @@ function App() {
       </Exhibit>
       <Cards />
       <List />
+      <div title="IPv4 Address">
+        <PublicIPAddress ipv6={false} />
+      </div>
+
+      <div title="IPv6 Address">
+        <PublicIPAddress ipv6={true} />
+      </div> 
     </div>
   );
 }
